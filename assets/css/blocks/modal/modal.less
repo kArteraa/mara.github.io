@@ -1,0 +1,144 @@
+//main : ../../style.less
+
+.modal {
+    opacity: 0;
+    z-index: -1;
+    transition: .3s linear;
+
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modal.active {
+    opacity: 1;
+    z-index: 10000;
+}
+
+.modal_block {
+    display: flex;
+    align-items: center;
+
+    border-radius: 15px;
+
+    color: #191919;
+    width: 50%;
+    height: 70%;
+    background-color: #fff;
+    z-index: 2;
+
+
+    &--title {
+        font-family: @mons;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 36px;
+        width: 30%;
+        text-align: center;
+    }
+
+    &--form {
+        color: #fff;
+        height: 100%;
+        background-color: #191919;
+        border-radius: 0 15px 15px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &--input {
+            font-size: 14px;
+            font-family: @mons;
+            padding: 10px 18px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            outline: none;
+            border: none;
+            transform: scale(0.95);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:hover {
+                transform: scale(1);
+            }
+            &:focus {
+                transform: scale(1);
+            }
+        }
+
+        &--btn {
+            font-family: @sans;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #fff;
+            background: transparent;
+            border: 2px solid #fff;
+
+            padding: 8px 19px;
+            margin-top: 20px;
+            cursor: pointer;
+
+            transition: .2s linear;
+
+            &:hover {
+                color: #191919;
+                background: #fff;
+            }
+            &:active {
+                transform: scale(.98);
+            }
+        }
+
+        &--title {
+            margin-bottom: 20px;
+            font-family: @mons;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 26px;
+        }
+
+        &--models {
+            margin-bottom: 100px;
+
+            &--mara {
+                width: 150px;
+                font-family: @sans;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: #fff;
+                background: transparent;
+                border: 2px solid #fff;
+
+                padding: 8px 19px;
+                margin-top: 20px;
+                cursor: pointer;
+                transform: scale(.9);
+
+                transition: .2s linear;
+
+                &.active {
+                    color: #191919;
+                    background: #fff;
+                    transform: scale(1);
+                }
+
+            }
+        }
+
+        width: 70%;
+    }
+}
+
+.overlay {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.5);
+}

@@ -1,0 +1,77 @@
+//main : ../../style.less
+
+.marax_intro {
+    background: linear-gradient(132.67deg, #6100FF 0%, #00C337 51.9%, #42A4FF 99.98%);
+    background-size: 200% 200%;
+	animation: backgroundGradient 20s ease infinite;
+    height: 100vh;
+    color: #fff;
+
+    &--content {
+        margin-bottom: 200px;
+        &--item {
+            display: flex;
+            flex-direction: column;
+
+            font-family: @mons;
+            font-weight: 700;
+            font-size: 35px;
+            margin-bottom: 10px;
+           
+            opacity: 0;
+            transition: 1s linear;
+        }
+        &--item:nth-child(1) {
+            transform: translateX(-20px);
+        }
+        &--item:nth-child(2) {
+            transform: translateX(20px);
+        }
+        &--item:nth-child(3) {
+            transform: translateX(-20px);
+        }
+        &--item.active{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    &--footer {
+        opacity: 0;
+        transition: 2s linear 1s;
+    }
+
+    &--footer.active {
+        opacity: 1;
+    }
+
+    &--title {
+        font-family: @mons;
+        font-weight: 700;
+        font-size: 75px;
+        margin-bottom: 25px;
+    }
+
+}
+
+.marax_intro_inner {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 0 20px 0;
+}
+
+
+@keyframes backgroundGradient {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

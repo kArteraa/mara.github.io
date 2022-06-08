@@ -1,0 +1,74 @@
+//main : ../../style.less
+
+.main_about {
+    color: #2c2d30;
+    background-color: #F2F2F2;
+
+    &--title {
+        font-size: 55px;
+        font-family: @mons;
+        margin-bottom: 100px;
+    }
+
+    &--item {
+        display: flex;
+        margin-bottom: 100px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &--content {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &.right {
+                margin-left: 50px;
+            }
+
+            &.left {
+                margin-right: 50px;
+            }
+
+            &--title {
+                font-size: 36px;
+                font-family: @mons;
+                margin-bottom: 20px;
+            }
+
+            &--text {
+                font-size: 16px;
+                font-family: @mons;
+
+                color: #191919;
+            }
+        }
+
+        &--photo_block {
+            width: 70%;
+
+            &--photo {
+                display: block;
+                max-width: 100%;
+                height: auto;
+                border-radius: 15px;
+                transition: .2s linear;
+
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
+
+.main_about_inner {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 100px 50px 100px 50px;
+}

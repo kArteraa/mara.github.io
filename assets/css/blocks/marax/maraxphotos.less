@@ -1,0 +1,85 @@
+//main : ../../style.less
+
+
+.marax_photos {
+    background-color: #191919;
+    &--item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+
+        &--photo_block {
+            display: flex;
+            width: 55%;
+        }
+
+        &--photo {
+            display: block;
+            max-width: 100%;
+            height: auto;
+
+        }
+        &--content {
+            width: 45%;
+            padding: 50px 0 0 50px;
+            text-align: right;
+
+            &--title {
+                font-family: @sans;
+
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 50px;
+                font-size: 100px;
+                line-height: .9;
+            }
+
+            &--text {
+                font-family: @mons;
+                font-weight: 700;
+                color: @gray;
+            }
+        }
+    }
+
+    &--item:last-child {
+        margin-bottom: 0;
+    }
+
+    &--item.left {
+
+        & .marax_photos--item--photo_block {
+            width: 100%;
+            height: auto;
+        }
+
+        
+    }
+    &--item.bottom {
+        flex-direction: column;
+        & .marax_photos--item--photo_block {
+            display: flex;
+            align-items: center;
+            width: 80%;
+        }
+        & .marax_photos--item--content {
+            text-align: center;
+            padding: 50px 0 0 0;
+            
+
+            &--title {
+                font-size: 50px;
+                display: block;
+                margin: 20px 0 0 0;
+            }
+        }
+    }
+}
+
+.marax_photos_inner {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 200px 0 100px 0;
+}

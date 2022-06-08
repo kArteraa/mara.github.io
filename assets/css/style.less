@@ -1,0 +1,86 @@
+//compress: true 
+
+@import 'vars';
+
+body {
+    height: 100vh;
+    background-color: #212121;
+    margin: 0;
+    color: #fff;
+    position: relative;
+    &.marax_body {
+        background-color: #fff;
+    }
+    
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+// ******* ANIMATE *******
+
+.animateItem {
+    opacity: 0;
+
+    &.left {
+        transform: translateX(-50px);
+
+        &.animate {
+            transform: translate(0);
+        }
+    }
+
+    &.right {
+        transform: translateX(50px);
+
+        &.animate {
+            transform: translate(0);
+        }
+    }
+    transition: 1s ease-in-out;
+
+
+    &.animate {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+
+// ******* BLOCKS ********
+
+@import 'blocks/container';
+@import 'blocks/nav';
+@import 'blocks/headers';
+@import 'blocks/marax/marax';
+@import 'blocks/marax/maraxintro';
+@import 'blocks/marax/maraxpreview';
+@import 'blocks/marax/maraxshow';
+@import 'blocks/marax/maraxslider';
+@import 'blocks/marax/maraxphotos';
+@import 'blocks/marax/maraxcharacteristics';
+@import 'blocks/team/team';
+@import 'blocks/footer';
+@import 'blocks/maraxpro/maraxprointro';
+@import 'blocks/maraxpro/maraxprophotos';
+@import 'blocks/maraxpro/maraxprodescription';
+@import 'blocks/maraxpro/maraxproview';
+@import 'blocks/maraxpro/maraxprocharacteristics';
+@import 'blocks/main/mainintro';
+@import 'blocks/main/mainabout';
+@import 'blocks/marax/maraxview';
+@import 'blocks/modal/modal';
+@import 'blocks/modal/modalphoto';

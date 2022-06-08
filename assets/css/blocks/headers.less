@@ -1,0 +1,56 @@
+//main : ../style.less
+
+.header {
+    width: 100%;
+    background: rgba(0,0,0,.2);
+
+    transition: .2s linear;
+
+    position:fixed;
+    top: 0;
+    z-index: 1000;
+    
+
+    &--logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--title_block {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            &--title {
+                font-family: @cin;
+                font-size: 40px;
+                text-align: center;
+                color: #524f4f;
+            }
+
+            &--suptitle {
+                font-family: @mons;
+                font-weight: 400;
+                width: 100%;
+                text-align: center;
+                font-size: 16px;
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 2;
+            }
+        }
+    }
+}
+
+.header:hover {
+    background: rgba(0,0,0,.8);
+}
+
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}

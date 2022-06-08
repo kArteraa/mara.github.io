@@ -1,0 +1,39 @@
+//main : ../../style.less
+
+.modal_photo {
+    opacity: 0;
+    z-index: -1;
+    transition: .3s linear;
+
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modal_photo.active {
+    opacity: 1;
+    z-index: 10000;
+}
+
+.modal_photo_block {
+    width: 70%;
+    &--photo {
+        display: block;
+        width: 100%;
+        height: auto;
+
+        border-radius: 25px;
+    }
+}
+
+.overlay_photo {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.5);
+}

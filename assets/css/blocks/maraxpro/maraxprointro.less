@@ -1,0 +1,76 @@
+//main : ../../style.less
+
+.maraxpro_intro {
+    // background: url('../images/MaraXpro/on_site/render_main.png') center no-repeat;
+    // background-size: contain;
+    height: 100vh;
+
+    &--item {
+        height: 25%;
+        opacity: 0;
+        z-index: -1;
+        width: 0;
+        background: #fff;
+        background-size: cover;
+        background-attachment: fixed;
+        transition: width 2s ease-in-out , opacity 1s ease-in-out;
+    }
+    &--item.active {
+        width: 100%;
+        opacity: 1;
+        z-index: 0;
+    }
+
+    &--content {
+        color:@black;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        text-align: center;
+
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 1s ease-in-out 1s;
+
+
+        &--title {
+            transform: translateY(100px);
+            font-family: @sans;
+            font-weight: 400;
+            font-size: 50px;
+
+            margin-bottom: 10px;
+        }
+
+        &--text {
+            transform: translateY(100px);
+            font-family: @mons;
+            font-weight: 400;
+            font-size: 24px;
+
+            color: darken(@gray,10%);
+        }
+
+        &--image {
+            display: block;
+            height: 100%;
+            max-width: 100%;
+            transform: translateY(100px);
+        }
+    }
+    &--content.active {
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+.maraxpro_intro_inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}

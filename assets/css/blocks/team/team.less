@@ -1,0 +1,154 @@
+// main : ../../style.less
+
+.team_body {
+    height: 100vh;
+    background: linear-gradient(132.67deg, #B2FEFA 0%, #0ED2F7 51.9%);
+    position: relative;
+}
+
+.team {
+    position: relative;
+    &--item {
+        width: 50%;
+        height: 40vh;
+        background-color: #CC82FD;
+        color: @black;
+        position: relative;
+        
+
+
+        &--image {
+            position: absolute;
+            top: 0;
+            z-index: 1;
+
+            display: block;
+            width: 100%;
+            height: 100%;
+            opacity: .5;
+
+            transition: opacity .5s ease-in-out;
+        }
+
+
+
+        &--title {
+            color: #fff;
+
+            font-family: @mons;
+            text-transform: uppercase;
+            font-size: 15px;
+            z-index: 2;
+        }
+
+        &--footer {
+            color: #fff;
+
+            font-family: @sans;
+            margin-top: auto;
+            font-size: 20px;
+            line-height: .9;
+            z-index: 2;
+        }
+
+    }
+
+    &--item:hover &--item--image {
+        opacity: .7;
+    }
+    
+    &--item_block {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    &--item.blue {
+        background: linear-gradient(132.67deg, #021B79 0%, #0575E6 51.9%);
+    }
+    &--item.green {
+        background: linear-gradient(132.67deg, #56ab2f 0%, #a8e063 51.9%);
+    }
+    &--item.purple {
+        background: linear-gradient(132.67deg, #834d9b 0%, #d04ed6 51.9%);
+    }
+    &--item.orange {
+        background: linear-gradient(132.67deg, #ff4b1f 0%, #ff9068 51.9%);
+    }
+
+
+    &--item_inner {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        padding: 20px 15px;
+    }
+}
+
+.team_inner--bottom_block .team--item_block {
+    margin-top: 20px;
+}
+
+
+.team_inner {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &--up_block , &--bottom_block{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        opacity: 0;
+        z-index: -1;
+        transition: 1s ease-in-out;
+    }
+
+    &--up_block {
+        transform: translateY(-20px);
+    }
+    &--bottom_block {
+        transform: translateY(20px);
+    }
+
+    &--up_block.active , &--bottom_block.active {
+        opacity: 1;
+        transform: translateY(0);
+        z-index: 1;
+    }
+}
+
+.team_mara_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+
+    &--block {
+        opacity: 0;
+        transition: opacity 2s ease-out .5s;
+        &--title {
+            font-family: @cin;
+            font-size: 60px;
+            text-align: center;
+            line-height: .7;
+            &--inside {
+                font-family: @sans;
+                font-weight: 400;
+                font-size: 30px;
+            }
+        }
+
+    }
+    &--block.active {
+        opacity: 1;
+    }
+
+}
